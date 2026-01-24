@@ -19,9 +19,7 @@ export default function Profile() {
           'Authorization': `Bearer ${token}`
         }
       });
-      // console.log(res);
       if(res.status === 200){
-        // toast.success("Profile data fetched successfully");
         setData(res.data.data);
       }else{
         toast.error("Could not fetch profile data");

@@ -34,7 +34,6 @@ const handleSubmit = async (e) => {
         toast.error(message);
         console.error(err.response?.data);
     }
-    // console.log('Logging in with', { userEmail, password });
 };
 
 return (

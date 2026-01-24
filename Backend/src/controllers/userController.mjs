@@ -5,7 +5,6 @@ import {secret_key} from '../../config.mjs';
 const registerUser = async (req, res)=>{
     try{
         let {firstname, lastname, userEmail, password, phoneNumber} = req.body;
-        // console.log(req.body);
         if(!firstname){
             return res.status(400).send({status:"failed", message:"First name is required"});
         }
@@ -22,7 +21,6 @@ const registerUser = async (req, res)=>{
             return res.status(400).send({status:"failed", message:"Password name is required"});
         }
         password = await bcrypt.hash(password, 10);
-        // console.log(password);
         await userModel.create({firstname, lastname, userEmail, password, phoneNumber});
         return res.status(201).send({status:"ok", message:"User registered successfully"});
     }catch(error){

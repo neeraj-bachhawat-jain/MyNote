@@ -74,7 +74,6 @@ export default function Signup() {
         console.error(err.response?.data);
 }
 
-    // console.log("Logging in with", {firstName, lastName, userEmail, phoneNumber, password,  confirmPassword});
   };
 
   return (
