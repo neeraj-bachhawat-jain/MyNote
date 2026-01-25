@@ -7,7 +7,7 @@ export default function LeftNav({handleOnClick}) {
     
     const fetchNotes = async () =>{
         try{
-            const res = await axios.get('http://localhost:5000/notes', {
+            const res = await axios.get('https://mynote-backend-s1ae.onrender.com/notes', {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${JSON.parse(localStorage.getItem('userData'))?.token}`
@@ -21,7 +21,7 @@ export default function LeftNav({handleOnClick}) {
     
     const handleDelete = async (noteId) => {
         try {
-            await axios.delete(`http://localhost:5000/notes/${noteId}`, {
+            await axios.delete(`https://mynote-backend-s1ae.onrender.com/notes/${noteId}`, {
                 headers: {
                     'Authorization': `Bearer ${JSON.parse(localStorage.getItem('userData'))?.token}`
                 }
