@@ -56,7 +56,7 @@ export default function Signup() {
       password,
     };
     try {
-      let res = await axios.post("http://localhost:5000/signup", payload, {
+      let res = await axios.post("https://mynote-backend-s1ae.onrender.com/signup", payload, {
         headers: {
           "Content-Type": "application/json",
         },
