@@ -19,7 +19,7 @@ export default function RightNav({ selectedNote, setSelectedNote, heading, noteC
       content: content,
     };
     try {
-      let res = await axios.post("http://localhost:5000/notes", payload, {
+      let res = await axios.post("https://mynote-backend-s1ae.onrender.com/notes", payload, {
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${JSON.parse(localStorage.getItem('userData'))?.token}`,
