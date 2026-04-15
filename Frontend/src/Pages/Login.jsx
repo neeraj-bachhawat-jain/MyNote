@@ -17,7 +17,7 @@ const handleSubmit = async (e) => {
     }
     try{
         let payload = {userEmail, password};
-        let res = await axios.post('https://mynote-backend-s1ae.onrender.com/login', payload, {
+        let res = await axios.post('http://localhost:5000/login', payload, {
             headers: {
                 'Content-Type': 'application/json'
             }

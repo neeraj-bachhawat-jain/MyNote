@@ -13,7 +13,7 @@ export default function Profile() {
   let id = JSON.parse(localStorage.getItem('userData'))?.id;
   const fetchData = async ()=>{
     try{
-      let res = await axios.get(`https://mynote-backend-s1ae.onrender.com/profile/${id}`,{
+      let res = await axios.get(`http://localhost:5000/profile/${id}`,{
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
