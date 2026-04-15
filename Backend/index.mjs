@@ -6,11 +6,7 @@ import cors from 'cors';
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-    origin: [
-        "https://mynote-onq7.onrender.com"
-    ]
-}));
+app.use(cors());
 mongoose.connect(URI).then(()=>console.log("database connected successfully")
 ).catch((err)=>console.log(err)); 
 app.use('/', router);
