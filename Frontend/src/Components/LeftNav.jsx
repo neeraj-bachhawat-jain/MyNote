@@ -31,7 +31,6 @@ export default function LeftNav({handleOnClick}) {
             setError(err);
         }
     }
-    
     useEffect(() => {
         fetchNotes();
     }, []);

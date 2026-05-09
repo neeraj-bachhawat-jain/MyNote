@@ -42,7 +42,7 @@ export default function Profile() {
           <div className='bg-gray-800 rounded-lg shadow-lg p-8'>
             <div className='mb-6 w-full flex justify-center'>
               <img 
-                src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" 
+                src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y"
                 alt="Profile Avatar"
                 className='w-32 h-32 rounded-full border-4 border-blue-500'/>
             </div>

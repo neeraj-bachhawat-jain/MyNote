@@ -12,6 +12,7 @@ export default function Notes() {
   let [firstname, setFirstname] = useState("");
   let [id, setId] = useState("");
   let [selectedNote, setSelectedNote] = useState(null);
+  let [noteId, setNoteId] = useState("");
   let [heading, setHeading] = useState("");
   let [noteContent, setNoteContent] = useState("");
 
@@ -27,6 +28,7 @@ export default function Notes() {
   },[]);
   const handleOnClick = (note) => {
     setSelectedNote(true);
+    setNoteId(note._id);
     setHeading(note.title);
     setNoteContent(note.content);
   }
@@ -37,8 +39,8 @@ export default function Notes() {
         <div className="w-full md:w-1/4 lg:w-1/5 bg-gray-800 rounded-lg shadow-lg overflow-auto">
           <LeftNav handleOnClick={handleOnClick} />
         </div>
-        <div className="w-full md:w-3/4 lg:w-4/5 bg-gray-800 rounded-lg shadow-lg overflow-auto">
-          <RightNav setSelectedNote={setSelectedNote} selectedNote={selectedNote} heading={heading} noteContent={noteContent} />
+        <div className="w-full md:w-3/4 lg:w-4/5 bg-gray-800 rounded-lg shadow-lg overflow-auto whitespace-pre-wrap">
+          <RightNav setSelectedNote={setSelectedNote} selectedNote={selectedNote} heading={heading} noteContent={noteContent} noteId={noteId} />
         </div>
       </div>
       <Footer />

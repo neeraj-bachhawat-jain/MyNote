@@ -8,7 +8,7 @@ router.get('/', (req, res)=>{
 })
 router.post('/signup', registerUser);
 router.post('/login', loginUser);
-router.put('/update', authentication, authorization, updatedUser);
+router.put('/update/:id', authentication, authorization, updatedUser);
 router.get('/profile/:id', authentication, authorization, getUserProfile);
 router.get('/notes', authentication, authorization, getNotes);
 router.post('/notes', authentication, authorization, createNote);
